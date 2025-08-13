@@ -78,14 +78,14 @@
 #else
 &kp ESC     &kp Q      &kp W      &kp F      &kp P      &kp B      &kp J      &kp L      &kp U      &kp Y      &kp QUOT   &kp BKSP
 &kp TAB     &kp A      &kp R      &kp S      &kp T      &kp G      &kp M      &kp N      &kp E      &kp I      &kp O      &kp QUOT
-&kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V      &kp K      &kp H      &kp COMMA  &kp DOT    &kp UP     &kp SEMI
+&kp LSHFT   &kp Z      &kp X      &kp C      &kp D      &kp V      &kp K      &kp H      &kp COMMA  &kp DOT    &kp UP     &kp RET
 #endif
 #ifdef TBLE_DUAL_2U
 &kp LCTRL   &kp LGUI   &kp LALT   &mo NAV_L   &shifty    &kp SPACE   &mo NUM_L   &kp LALT   &kp RGUI   &kp RSHIFT
 #elif defined(TBLE_MIT)
 &kp LCTRL   &mo NAV_L  &kp LGUI  &kp LALT    &mo NUM_L   &kp SYM_L   &mo SPACE   &kp RET    &kp LEFT   &kp DOWN   &kp RIGHT
 #else
-&kp LCTRL   &kp LGUI   &mo NAV_L  &kp LALT    &mo NUM_L   &mo SYM_L   &kp SPACE   &none     &kp RET    &kp LEFT   &kp DOWN   &kp RIGHT
+&kp LCTRL   &kp LGUI   &mo NAV_L  &kp LALT    &mo NUM_L   &mo SYM_L   &kp SPACE   &none     &kp SEMI    &kp LEFT   &kp DOWN   &kp RIGHT
 #endif
             >;
         };
@@ -109,15 +109,15 @@
         num_layer {
             label = "Num";
             bindings = <
-&none      &kp LBKT   &none      &kp UP     &none      &kp RBKT   &kp C_PREV   &kp N1      &kp N2      &kp N3      &none      &none
-&none      &kp MINUS  &kp LEFT   &kp DOWN   &kp RIGHT  &kp EQUAL  &kp C_NEXT   &kp N4      &kp N5      &kp N6      &none      &none
-&none      &kp GRAVE  &none      &none      &none      &kp BSLH   &none       &kp N7      &kp N8      &kp N9      &trans      &none
+&none      &none      &none      &kp UP     &none      &none      &kp EQUAL   &kp N1      &kp N2      &kp N3      &kp PLUS   &kp MINUS
+&none      &none      &kp LEFT   &kp DOWN   &kp RIGHT  &kp LBKT   &kp LPAR    &kp N4      &kp N5      &kp N6      &kp STAR   &kp FSLH
+&none      &none      &none      &none      &none      &kp RBKT   &kp RPAR    &kp N7      &kp N8      &kp N9      &trans     &none
 #ifdef TBLE_DUAL_2U
 &none      &none      &none      &kp N0     &none      &none      &none      &none      &none      &none
 #elif defined(TBLE_MIT)
 &none      &none      &none      &kp N0     &none      &none      &kp N0     &kp DEL     &none      &none      &none
 #else
-&none      &none      &none      &kp N0     &none      &none      &kp N0     &none      &kp DEL     &trans      &trans      &trans
+&none      &none      &none      &kp N0     &none      &none      &kp N0     &none      &kp DEL     &trans     &trans     &trans
 #endif
             >;
         };
@@ -125,15 +125,15 @@
         sym_layer {
             label = "Sym";
             bindings = <
-&none      &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR    &kp RBRC    &none      &none      &none      &none      &none      &bootloader
-&none      &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET   &kp PLUS    &none      &none      &none      &none      &none      &none
-&none      &kp TILDE  &kp EXCL   &kp AT      &kp HASH    &kp PIPE    &none      &none      &none      &none      &trans      &none
+&bootloader  &none      &kp F1     &kp F2     &kp F3     &kp F10    &kp LBRC   &kp EXCL   &kp AT     &kp HASH   &kp RBRC   &kp TILDE
+&none        &none      &kp F4     &kp F5     &kp F6     &kp F11    &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS   &kp PIPE
+&none        &none      &kp F7     &kp F8     &kp F9     &kp F12    &kp LPAR   &kp AMPS   &kp STAR   &kp RPAR   &trans     &none
 #ifdef TBLE_DUAL_2U
 &none      &none      &none      &kp RPAR    &none      &none      &none      &none      &none      &none
 #elif defined(TBLE_MIT)
 &none      &none      &none      &kp RPAR    &none      &none      &none      &kp DEL   &none      &none      &none
 #else
-&none      &none      &none      &kp RPAR    &none      &none      &none      &none      &kp DEL     &trans      &trans      &trans
+&none        &none      &none      &none      &none      &none      &none      &none      &kp DEL     &trans     &trans     &trans
 #endif
             >;
         };
