@@ -85,7 +85,7 @@
 #elif defined(TBLE_MIT)
 &kp LCTRL   &mo NAV_L  &kp LGUI  &kp LALT    &mo NUM_L   &kp SYM_L   &mo SPACE   &kp RET    &kp LEFT   &kp DOWN   &kp RIGHT
 #else
-&kp LCTRL   &kp LGUI   &mo NAV_L  &kp LALT    &mo NUM_L   &mo SYM_L   &kp SPACE   &none     &kp SEMI    &kp LEFT   &kp DOWN   &kp RIGHT
+&kp LCTRL   &kp LGUI   &mo NAV_L  &kp LALT    &mo SYM_L   &mo NUM_L   &kp SPACE   &none     &kp FSLH    &kp LEFT   &kp DOWN   &kp RIGHT
 #endif
             >;
         };
@@ -109,15 +109,15 @@
         num_layer {
             label = "Num";
             bindings = <
-&none      &none      &none      &kp UP     &none      &none      &kp EQUAL   &kp N1      &kp N2      &kp N3      &kp PLUS   &kp MINUS
-&none      &none      &kp LEFT   &kp DOWN   &kp RIGHT  &kp LBKT   &kp LPAR    &kp N4      &kp N5      &kp N6      &kp STAR   &kp FSLH
-&none      &none      &none      &none      &none      &kp RBKT   &kp RPAR    &kp N7      &kp N8      &kp N9      &trans     &none
+&none      &none      &none      &kp UP     &none      &none      &kp EQUAL   &kp N1      &kp N2      &kp N3      &kp PLUS   &trans
+&none      &none      &kp LEFT   &kp DOWN   &kp RIGHT  &kp LBKT   &kp LPAR    &kp N4      &kp N5      &kp N6      &kp STAR   &none
+&none      &none      &none      &none      &none      &kp RBKT   &kp RPAR    &kp N7      &kp N8      &kp N9      &kp FSLH   &none
 #ifdef TBLE_DUAL_2U
 &none      &none      &none      &kp N0     &none      &none      &none      &none      &none      &none
 #elif defined(TBLE_MIT)
 &none      &none      &none      &kp N0     &none      &none      &kp N0     &kp DEL     &none      &none      &none
 #else
-&none      &none      &none      &kp N0     &none      &none      &kp N0     &none      &kp DEL     &trans     &trans     &trans
+&none      &none      &none      &kp N0     &none      &none      &kp N0     &none      &kp DEL     &none     &kp MINUS     &none
 #endif
             >;
         };
